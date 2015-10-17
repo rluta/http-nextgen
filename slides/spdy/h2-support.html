@@ -1,0 +1,25 @@
+<h2>HTTP/2 Support</h2>
+<br />
+<div class="text-left">
+    <p>
+        Most advanced server are currently <a href="https://nghttp2.org/">h2o</a> and <a href="https://nghttp2.org/">nghttp2</a>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+        Firefox 36 has h2 enabled. Chrome 40+ has h2-14.
+    </p>
+    <p>&nbsp;</p>
+    <p>
+        Nghttpx can be used as a h2 frontend proxy to your server
+    </p>
+    <pre><code>
+        $ nghttpx -f 0,443 -b localhost,8080
+    </code></pre>
+    <p>&nbsp;</p>
+    <p>
+        Applications can easily support push with <strong>Link</strong> response header
+    </p>
+    <pre><code>
+        Link: &lt;/fonts/myfont.woff&gt;; rel=preload
+    </code></pre>
+</div>

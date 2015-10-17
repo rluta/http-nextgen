@@ -1,0 +1,20 @@
+<h2>Sockets API overview</h2>
+
+<pre><code class="javascript">
+    var ws = new WebSocket("ws://localhost:9000")
+
+    ws.addEventListener('open', function (evt) {
+        console.log("Socket is connected")
+    });
+
+    ws.addEventListener('message', function (evt) {
+        receiveMessage(evt.data);
+    });
+
+    ws.send('Beam me up, scotty !');
+
+    ws.addEventListener('close', function (evt) {
+        console.log("Socket is closed");
+    });
+
+</code></pre>

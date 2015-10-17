@@ -1,0 +1,15 @@
+<form role="form">
+    <div class="input-group">
+        <label for="query">Twitter Query text</label>
+        <input id="query" name="query" type="text" value="amour" />
+        <div class="btn btn-primary" id="query-set">Set Query</div>
+    </div>
+</form>
+<script>
+    $("#query-set").click(function () {
+        Vertx.postMessage({type:'query',data:$('#query').val()})
+        $(Reveal.getCurrentSlide()).on('twitter', function (data) {
+            $('#query').val(data.join(','))
+        })
+    });
+</script>

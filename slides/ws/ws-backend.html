@@ -1,0 +1,24 @@
+<h2>Example backend</h2>
+
+<pre style="height: 60rem; font-size: 1.5rem;"><code class="java" style="min-height: 30em">
+    def clients = []
+
+    def server = vertx.createHttpServer()
+
+    server.websocketHandler { WebSocket socket ->
+        clients << socket
+        socket.dataHandler { Buffer buffer ->
+            def msg = buffer.toString()
+            clients.each {
+                if (it != socket) {
+                    it.writeTextFrame(msg)
+                }
+            }
+        }
+        socket.closeHandler {
+            clients.remove(socket)
+        }
+    }
+
+    server.listen(7002)
+</code></pre>

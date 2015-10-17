@@ -1,0 +1,11 @@
+{
+  "generator-reveal": {
+    "presentationTitle": "HTTP Next Gen",
+    "packageVersion": "1.0.0",
+    "revealTheme": "default",
+    "useSass": false,
+    "deployToGithubPages": true,
+    "githubUsername": "rluta",
+    "githubRepository": "http-nextgen"
+  }
+}

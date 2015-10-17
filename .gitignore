@@ -1,0 +1,13 @@
+node_modules
+bower_components
+dist
+*.log
+.sass-cache
+index.html
+.idea
+*.iml
+*.ipr
+*.iws
+build
+.gradle
+twitter4j.properties

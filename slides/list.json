@@ -1,0 +1,92 @@
+[
+    "title.html",
+    {
+        "filename":"intro.html",
+        "attr": {
+            "data-background":"images/enterprise.jpg"
+        }
+    },
+    [
+        "http-the-old-generation.html",
+        "http/complex.html",
+        "http/inefficient.html",
+        "http/synchronous.html"
+    ],
+    {
+        "filename":"http/facepalm.html",
+        "attr": {
+            "data-background":"images/facepalm.jpg"
+        }
+    },
+    [
+        "event-source.html",
+        {
+            "attr":{
+                "data-js":"js/eventsource.js"
+            },
+            "filename":"sse/sse-front-api.html"
+        },
+        "sse/sse-backend.html",
+        "sse/extended.html",
+        "sse/sse-use-cases.html"
+    ],
+    [
+        "websockets.html",
+        "ws/sockets-overview.html",
+        {
+            "attr":{
+                "data-js":"js/websockets.js"
+            },
+            "filename": "ws/sockets-example.html"
+        },
+        "ws/ws-backend.html",
+        "ws/security-model.html"
+    ],
+    {
+        "filename":"win.html",
+        "attr": {
+            "data-background":"images/win.jpg"
+        }
+    },
+    "limitations.html",
+    [
+        {
+            "filename":"spdy-and-http2.html",
+            "attr": {
+                "data-background":"images/warpspeed.jpg"
+            }
+        },
+        "spdy/why.html",
+        "spdy/latency.html",
+        "spdy/how.html",
+        "spdy/dataflow.html",
+        "spdy/push.html",
+        "spdy/negociation.html",
+        {
+            "attr":{
+                "data-js":"js/spdydemo.js"
+            },
+            "filename": "spdy/demo.html"
+        },
+        {
+            "filename":"spdy/implementation.html",
+            "attr": {
+                "data-background":"images/picard-engage.jpg"
+            }
+        },
+        "spdy/impact.html",
+        "spdy/h2-support.html",
+        "spdy/spdy-support.html",
+        "spdy/implementations-status.html",
+        "spdy/gotchas-and-limitations.html"
+    ],
+    "recap.html",
+    {
+        "filename": "thanks.html",
+        "attr": {
+            "data-background":"images/spock-llap.jpg"
+        }
+
+    }
+
+]
