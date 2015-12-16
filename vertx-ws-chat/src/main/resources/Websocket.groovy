@@ -4,8 +4,10 @@ import org.vertx.groovy.core.http.WebSocket
 container.deployModule('io.vertx~mod-web-server~2.0.0-final', [
     web_root: 'web',
     port: 80,
+    host: '0.0.0.0',
     ssl: false,
-    host: '0.0.0.0'
+    key_store_path: "keystore.jks",
+    key_store_password: "changeit"
 ])
 
 def clients = []

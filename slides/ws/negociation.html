@@ -1,0 +1,28 @@
+<h2 style="margin-bottom: 2em">Setting up a Websocket</h2>
+
+<ul class="text-left">
+    <li>Custom protocol schemes <strong>ws://</strong> and <strong>wss://</strong></li>
+    <li>Negociated using <strong>HTTP/1.1 Upgrade</strong> mechanism</li>
+    <li>Optional <strong>subprotocols</strong> for application framing</li>
+</ul>
+
+<div style="margin-top: 1em; font-size: 1.2em;">
+<pre id="upgrade-request" class="fragment" style="float: left; width: 47%"><code
+    class="http" style="min-height: 15em">GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: echo.websocket.org
+Origin: http://www.websocket.org
+Sec-WebSocket-Key: i9ri`AfOgSsKwUlmLjIkGA==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Protocol: chat
+</code></pre>
+
+<pre id="upgrade-response" class="fragment" style="float: left; width:47%; margin-left: 3%"><code
+    class="http" style="min-height: 15em">HTTP/1.1 101 Web Socket Protocol Handshake
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: Qz9Mp4/YtIjPcdpbvG8bs=
+Sec-WebSocket-Protocol: chat
+</code></pre>
+</div>

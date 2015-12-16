@@ -1,0 +1,65 @@
+<h2 style="margin-bottom: 0.5em">Example Backend</h2>
+
+<ul class="nav nav-tabs">
+    <li class="active"><a class="tab-pane" data-toggle="tab" href="#ssecode">SSE Code</a></li>
+    <li><a class="tab-pane" data-toggle="tab" href="#twittercode">Twitter Handling</a></li>
+</ul>
+<div class="tab-content">
+<div id="ssecode" class="tab-pane active">
+<pre style="min-height: 10em;font-size: 0.8em;"><code class="java" style="min-height: 20em;">
+def server = vertx.createHttpServer(), rm = new RouteMatcher()
+def clients = []
+
+rm.get('/stream') { HttpServerRequest req ->
+    req.response.putHeader('Content-Type','text/event-stream')
+    req.response.putHeader('Access-Control-Allow-Origin','*')
+    req.response.putHeader('Cache-Control','public, no-cache')
+    req.response.chunked = true
+    req.response.write('retry: 1000\nevent: hello\ndata: {"type":"hello"}\n\n')
+
+    clients << req.response
+
+    req.response.closeHandler { clients.remove(req.response) }
+}
+
+vertx.eventBus.registerHandler('events') { Message msg ->
+    def jsonBody = new JsonObject((Map)msg.body().data)
+    def dataStr = "event: ${msg.body().type}\ndata: ${jsonBody.encode()}\n\n"
+
+    clients.each { HttpServerResponse resp -> resp.write(dataStr) }
+}
+
+server.requestHandler(rm.asClosure()).listen(7001)
+</code></pre>
+</div>
+<div id="twittercode" class="tab-pane">
+<pre style="min-height: 10em;font-size: 0.8em;"><code class="java" style="min-height: 20em;">
+def twitterFactory = new TwitterStreamFactory().getInstance();
+def queries = ['http2','perfug','webperf'];
+
+final StatusListener statusListener = new StatusAdapter() {
+    @Override
+    public void onStatus(Status status) {
+
+        vertx.eventBus.publish('events',[type:'twitter',
+            data:['id':status.id,'from':status.user.name,
+                  'message':status.text,'lang': status.lang
+            ]
+        ])
+    }
+};
+
+def connectTwitterStream(twitter, listener, query) {
+    twitter.cleanUp();
+    twitter.clearListeners();
+
+    twitter.addListener(listener);
+    FilterQuery filterQuery = new FilterQuery().track(query as String[])
+        .language(['fr','en'] as String[])
+    twitter.filter(filterQuery);
+}
+
+connectTwitterStream(twitterFactory,statusListener,queries)
+</code></pre>
+</div>
+</div>

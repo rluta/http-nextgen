@@ -3,6 +3,7 @@ import org.vertx.groovy.core.eventbus.Message
 import org.vertx.groovy.core.http.HttpServerRequest
 import org.vertx.groovy.core.http.HttpServerResponse
 import org.vertx.groovy.core.http.RouteMatcher
+import org.vertx.java.core.json.JsonArray
 import org.vertx.java.core.json.JsonObject
 
 def server = vertx.createHttpServer()
@@ -10,17 +11,22 @@ def rm = new RouteMatcher()
 def clients = []
 
 rm.get('/stream') { HttpServerRequest req ->
-    req.response.statusCode = 200
-    req.response.putHeader('Content-Type','text/event-stream')
-    req.response.putHeader('Access-Control-Allow-Origin','*')
-    req.response.putHeader('Cache-Control','public, no-cache')
-    req.response.chunked = true
-    req.response.write('data: {"type":"hello"}\n\n')
-
     clients << req.response
 
     req.response.closeHandler {
         clients.remove(req.response)
+    }
+
+    req.response.with {
+        statusCode = 200; chunked = true
+        putHeader('Content-Type','text/event-stream')
+        putHeader('Access-Control-Allow-Origin','*')
+        putHeader('Cache-Control','public, no-cache')
+        write('retry: 1000\nevent: hello\ndata: {"type":"hello"}\n\n')
+    }
+
+    vertx.eventBus.send('twitter',[:]) { msg ->
+        req.response.write("event: subscriptions\ndata: ${msg.body().join(',')}\n\n")
     }
 }
 
@@ -31,9 +37,8 @@ rm.noMatch { HttpServerRequest req ->
 }
 
 vertx.eventBus.registerHandler('events') { Message msg ->
-    // we assume messages are Map,ie send as JsonObject on the bus
-    def jsonBody = new JsonObject((Map)msg.body())
-    def dataString = "data: ${jsonBody.encode()}\n\n"
+    def jsonBody = new JsonObject((Map)msg.body().data)
+    def dataString = "event: ${msg.body().type}\ndata: ${jsonBody.encode()}\n\n"
 
     clients.each { HttpServerResponse resp ->
         try {

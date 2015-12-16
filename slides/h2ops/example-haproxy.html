@@ -1,0 +1,31 @@
+<h2>Recipe: Haproxy as load-balancer/router</h2>
+
+<pre><code>
+defaults
+    mode tcp
+
+frontend ft_h2
+    bind *:443 ssl crt /certs/aptiwan.pem npn spdy/3.1,http/1.1 alpn h2,http/1.1
+    default_backend bk_http
+
+acl npn_spdy         ssl_fc_npn -i spdy/3.1
+acl alpn_h2          ssl_fc_alpn -i h2
+
+use_backend bk_spdy    if npn_spdy
+use_backend bk_h2      if alpn_h2
+
+backend bk_spdy
+    server nginx 127.0.0.1:8443
+
+backend bk_h2
+    server apache 127.0.0.1:8081
+
+backend bk_http
+    server ft_http 127.0.0.1:80
+
+listen ft_http
+    mode http
+    bind *:80
+    http-request set-header X-Protocol http1
+    server apache 127.0.0.1:8080
+</code></pre>

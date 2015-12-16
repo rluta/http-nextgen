@@ -25,15 +25,18 @@ function init(onOpen) {
 
 function updateQuery(query) {
     self.postMessage({type:'debug',data:query});
+    var q = (query)?query.split(','):null;
     if (eb == null) {
         init(function () {
-            eb.send('twitter',{query:query.split(',')}, function (reply) {
+            eb.send('twitter',{query:q}, function (reply) {
                 self.postMessage({type:'debug',data:reply})
+                self.postMessage({type:'query',data:reply.join(',')})
             });
         });
     } else {
-        eb.send('twitter',{query:query.split(',')}, function (reply) {
-            self.postMessage({type:'query',data:reply.data.join(',')})
+        eb.send('twitter',{query:q}, function (reply) {
+            self.postMessage({type:'debug',data:reply})
+            self.postMessage({type:'query',data:reply.join(',')})
         });
     }
 }

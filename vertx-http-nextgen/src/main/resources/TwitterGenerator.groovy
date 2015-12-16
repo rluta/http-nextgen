@@ -8,7 +8,7 @@ import twitter4j.TwitterStreamFactory;
 
 final TwitterStream twitterFactory = new TwitterStreamFactory().getInstance();
 
-def queries = ['cadeau'];
+def queries = ['http2','perfug','webperf'];
 
 final StatusListener statusListener = new StatusAdapter() {
     @Override
@@ -20,16 +20,18 @@ final StatusListener statusListener = new StatusAdapter() {
                 'id':status.id,
                 'from':status.user.name,
                 'message':status.text,
-                'lang': status.lang,
-                'location':(status.geoLocation != null)?[status.geoLocation.longitude,status.geoLocation.latitude]:null
+                'lang': status.lang
             ]
         ])
     }
 };
 
 vertx.eventBus.registerHandler('twitter') { Message msg ->
-    queries = msg.body()?.query
-    connectTwitterStream(twitterFactory,statusListener,queries)
+    def newQueries = msg.body()?.query;
+    if (newQueries != null) {
+        queries = newQueries
+        connectTwitterStream(twitterFactory,statusListener,newQueries)
+    }
     msg.reply(queries)
 }
 
@@ -38,8 +40,9 @@ def connectTwitterStream(twitter, listener, query) {
     twitter.clearListeners();
 
     twitter.addListener(listener);
-    FilterQuery filterQuery = new FilterQuery();
-    filterQuery.track(query as String[]);
+    FilterQuery filterQuery = new FilterQuery()
+        .track(query as String[])
+        .language(['fr','en'] as String[])
     twitter.filter(filterQuery);
 }
 connectTwitterStream(twitterFactory,statusListener,queries)

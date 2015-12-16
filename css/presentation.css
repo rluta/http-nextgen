@@ -1,3 +1,5 @@
+@font-face {font-family:"Roddenberry";src:url("../fonts/roddenberry.eot?") format("eot"),url("../fonts/roddenberry.woff") format("woff"),url("../fonts/roddenberry.ttf") format("truetype");font-weight:normal;font-style:normal;}
+
 .reveal section > h2 { margin-bottom: 1em; }
 .reveal section h3 { margin-top: 2rem; color: cyan}
 
@@ -30,3 +32,7 @@
 .column-3 { float:left; width: 32%; }
 
 strong { color: darkorange }
+
+h1 {
+    font-family: Roddenberry !important;
+}

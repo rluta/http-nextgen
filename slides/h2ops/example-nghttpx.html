@@ -1,0 +1,10 @@
+<h2 style="margin-bottom: 2em">Recipe: Nghttpx as universal SSL frontend</h2>
+
+<p>
+    Activate a reverse proxy to act as HTTPS, SPDY and HTTP/2 endpoint for the site
+</p>
+
+<pre><code style="min-height: 10em;">
+docker run -it -p 443:443 rluta/http2 run.sh reverse www.octo.com \
+    -f *,443 --npn-list h2,spdy/3.1,http/1.1
+</code></pre>

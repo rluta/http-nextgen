@@ -1,0 +1,19 @@
+<h2>HTTP/2 on the JVM</h2>
+
+<div style="width: 60%; margin-left: 20%; margin-top: 2em; text-align: left">
+    <p>JDK 8 SSLEngine doesn't implement ALPN feature</p>
+    <br />
+    <p>2 options:</p>
+    <ul>
+        <li>Use Openssl JNI bridge (aka the Netty way)</li>
+        <li>Override the JDK SSLEngine (aka the Jetty way)</li>
+    </ul>
+</div>
+
+<div class="fragemnt" style="width: 60%; margin-left: 20%; margin-top: 2em; text-align: left">
+    <p>If using a SSLEngine override:</p>
+
+    <pre><code>
+    java -Xbootclasspath/p:_path_to_alpn_boot_jar ...
+    </code></pre>
+</div>

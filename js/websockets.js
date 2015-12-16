@@ -1,7 +1,7 @@
 (function() {
     var mySection = $('script[src="js/websockets.js"]').get(0).parentNode;
 
-    var wsUrl = "wss://demo.aptiwan.com/ws";
+    var wsUrl = "wss://chat.aptiwan.com/ws";
     var ws_me = 'Unknown';
     var ws = null;
     var useRaw = false;

@@ -1,39 +1,58 @@
+<style>
+    #h1-req-stats {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 7em;
+        margin-left: 10em;
+        padding: 2em;
+        border: 1px solid white;
+        background: black;
+        font-size: 1em;
+        color: white;
+    }
+    #h1-req-stats dd {
+        color: darkorange;
+        margin-bottom: 0.5em;
+    }
+</style>
 <h2 style="margin-bottom: 1em;">Inefficient</h2>
 
-<pre style="height: 25em"><code class="http" style="overflow: scroll">
-    GET /js/wonder/wbx-popin.js HTTP/1.1
-    Host: media.wonderbox.com
-    Connection: keep-alive
-    Pragma: no-cache
-    Cache-Control: no-cache
-    Accept: */*
-    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.118 Safari/537.36
-    Referer: http://www.wonderbox.fr/catalog/product/view/id/422740/s/mille-une-nuits-et-delices/category/10041/
-    Accept-Encoding: gzip, deflate, sdch
-    Accept-Language: en-US,en;q=0.8,fr-FR;q=0.6,fr;q=0.4,es;q=0.2
+<pre style="font-size: 0.5em"><code class="http" style="min-height: 25em; width: 100%">
+GET /assets/layout/logo-elcurator-629d8fd0890cdf46c026ae00028fd0b1.png HTTP/1.1
+Host: d35g3fkzt6085n.cloudfront.net
+Connection: keep-alive
+Accept: image/webp,image/*,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.71 Safari/537.36
+DNT: 1
+Referer: http://www.octo.com/en
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: en-US,en;q=0.8,fr-FR;q=0.6,fr;q=0.4,es;q=0.2
 
-    HTTP/1.1 200 OK
-    Content-Type: application/javascript
-    Content-Length: 704
-    Connection: keep-alive
-    Date: Thu, 02 Apr 2015 16:40:36 GMT
-    Server: Apache
-    Last-Modified: Thu, 02 Apr 2015 15:30:17 GMT
-    Accept-Ranges: bytes
-    Content-Encoding: gzip
-    X-Hostname: multipass-noel2
-    Cache-Control: public, max-age=604800
-    Vary: Accept-Encoding
-    Age: 489951
-    X-Cache: Hit from cloudfront
-    Via: 1.1 b2f908ecce2d45999eb3a2b946e80388.cloudfront.net (CloudFront)
-    X-Amz-Cf-Id: 9fdEgC2peG4Rkts3EPdejDYyzuDiVcoCc7L1CS9HiD8k75GcjJwTaw==
+HTTP/1.1 200 OK
+Content-Type: image/png
+Content-Length: 2386
+Connection: keep-alive
+Date: Mon, 12 Oct 2015 14:08:24 GMT
+Expires: Tue, 11 Oct 2016 19:55:33 GMT
+Cache-Control: public, max-age=31557600
+Last-Modified: Mon, 12 Oct 2015 13:55:34 GMT
+ETag: "cbc33e37e8cf133955512fb7848e41b6"
+Accept-Ranges: bytes
+Server: AmazonS3
+Age: 503457
+X-Cache: Hit from cloudfront
+Via: 1.1 3f22f357c61a6a80d5fbac70c533bc44.cloudfront.net (CloudFront)
+X-Amz-Cf-Id: MIsHppr4uJAhCO-NQTCEgzizgs3JWGRM7gR53W8Nc8vGxeAOUoCQQA==
 </code></pre>
 
-<div class="text-left tab-2" style="margin-top: 1em;">
-    <ul>
-        <li>Request headers: <strong>517 bytes</strong></li>
-        <li>Response headers: <strong>564 bytes</strong></li>
-        <li>Response body: <strong>704 bytes</strong></li>
-    </ul>
+<div id="h1-req-stats" class="text-left fragment">
+<dl>
+    <dt>Response body</dt>
+    <dd>2386 bytes</dd>
+    <dt>Response headers</dt>
+    <dd>503 bytes (21% overhead)</dd>
+    <dt>Request</dt>
+    <dd>446 bytes</dd>
+</dl>
 </div>

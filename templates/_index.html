@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.min.css">
 
         <link rel="stylesheet" href="bower_components/reveal.js/css/theme/default.css" id="theme">
-        <link rel="stylesheet" href="css/bootstrap.min.css" >
+        <link rel="stylesheet" href="css/bootstrap.css" >
         <link rel="stylesheet" href="css/bootstrap-theme.min.css" >
         <link rel="stylesheet" href="css/jquery.slidepanel.css" >
         <link rel="stylesheet" href="css/presentation.css" >
@@ -22,6 +22,7 @@
 
         <!-- For syntax highlighting -->
         <link rel="stylesheet" href="bower_components/reveal-highlight-themes/styles/zenburn.css" id="highlight-theme">
+        <link rel="stylesheet" src="bower_components/nvd3/build/nv.d3.min.css" />
 
         <!-- If the query includes 'print-pdf', use the PDF print sheet -->
         <script>
@@ -66,6 +67,8 @@
         <script src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/jquery.slidepanel.js"></script>
+        <script src="bower_components/d3/d3.min.js"></script>
+        <script src="bower_components/nvd3/build/nv.d3.min.js"></script>
 
         <script>
             function actionToggle() {
@@ -77,6 +80,10 @@
                 return (window.location.href.match('rluta.github.io') != null)
                     || (window.location.search.match('github') != null)
             }
+
+            Array.prototype.diff = function(a) {
+                return this.filter(function(i) {return !(a.indexOf(i) > -1);});
+            };
 
             var Vertx = new Worker('js/vertx-worker.js');
             Vertx.onmessage = function (msg) {
@@ -107,7 +114,7 @@
                     { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
                     { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlighting(); } },
                     { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
                     { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
                     // { src: 'bower_components/reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }

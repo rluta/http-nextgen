@@ -1,5 +1,10 @@
 [
-    "title.html",
+    {
+        "filename":"title.html",
+        "attr": {
+            "data-background":"images/stars.jpg"
+        }
+    },
     {
         "filename":"intro.html",
         "attr": {
@@ -7,31 +12,53 @@
         }
     },
     [
-        "http-the-old-generation.html",
+        {
+            "attr": {
+                "data-background": "images/st-original-cast.jpg"
+            },
+            "filename":"http/original.html"
+        },
         "http/complex.html",
         "http/inefficient.html",
-        "http/synchronous.html"
+        "http/synchronous.html",
+        {
+            "attr": {
+                "data-js":"js/plt.js"
+            },
+            "filename":"http/plt.html"
+        }
     ],
     {
-        "filename":"http/facepalm.html",
+        "filename":"facepalm.html",
         "attr": {
             "data-background":"images/facepalm.jpg"
         }
     },
     [
-        "event-source.html",
+        {
+            "attr":{
+                "data-background":"images/enterprise-full-fire.png"
+            },
+            "filename":"sse/title.html"
+        },
+        "sse/event-source.html",
         {
             "attr":{
                 "data-js":"js/eventsource.js"
             },
-            "filename":"sse/sse-front-api.html"
+            "filename":"sse/front-api.html"
         },
-        "sse/sse-backend.html",
-        "sse/extended.html",
-        "sse/sse-use-cases.html"
+        "sse/example-backend.html",
+        "sse/use-cases.html"
     ],
     [
-        "websockets.html",
+        {
+            "filename":"ws/title.html",
+            "attr":{
+                "data-background":"images/teleporter.jpg"
+            }
+        },
+        "ws/negociation.html",
         "ws/sockets-overview.html",
         {
             "attr":{
@@ -39,8 +66,18 @@
             },
             "filename": "ws/sockets-example.html"
         },
-        "ws/ws-backend.html",
-        "ws/security-model.html"
+        "ws/use-cases.html",
+        "ws/ws-backend.html"
+    ],
+    [
+        {
+            "filename":"webrtc/title.html",
+            "attr":{
+                "data-background":"images/romulans-viewscreen.jpg"
+            }
+        },
+        "webrtc/how.html",
+        "webrtc/use-cases.html"
     ],
     {
         "filename":"win.html",
@@ -48,45 +85,99 @@
             "data-background":"images/win.jpg"
         }
     },
-    "limitations.html",
+    "caniuse.html",
+    "gotchas.html",
     [
         {
-            "filename":"spdy-and-http2.html",
+            "filename":"h2proto/intro.html",
             "attr": {
                 "data-background":"images/warpspeed.jpg"
             }
         },
-        "spdy/why.html",
-        "spdy/latency.html",
-        "spdy/how.html",
-        "spdy/dataflow.html",
-        "spdy/push.html",
-        "spdy/negociation.html",
+        "h2proto/why.html",
+        "h2proto/how.html",
+        "h2proto/variants.html",
+        "h2proto/framing.html",
         {
+            "filename":"h2proto/streams.html",
             "attr":{
-                "data-js":"js/spdydemo.js"
-            },
-            "filename": "spdy/demo.html"
-        },
-        {
-            "filename":"spdy/implementation.html",
-            "attr": {
-                "data-background":"images/picard-engage.jpg"
+                "data-js":"js/h2streams.js"
             }
         },
-        "spdy/impact.html",
-        "spdy/h2-support.html",
-        "spdy/spdy-support.html",
-        "spdy/implementations-status.html",
-        "spdy/gotchas-and-limitations.html"
+        {
+            "filename":"h2proto/hpack.html",
+            "attr":{
+                "data-js":"js/hpack.js"
+            }
+        },
+        {
+            "attr":{
+                "data-js":"js/h2demo.js"
+            },
+            "filename": "h2perf/demo.html"
+        }
     ],
-    "recap.html",
+    {
+        "filename":"step.html",
+        "attr": {
+            "data-background":"images/data.jpg"
+        }
+    },
+    [
+        "h2perf/frontgains.html",
+        "h2perf/spdyweb-graphs.html",
+        "h2perf/apache2-perf.html",
+        "h2perf/h2o-benchmarks.html"
+    ],
+    {
+        "filename":"step.html",
+        "attr": {
+            "data-background":"images/picard-engage.jpg"
+        }
+    },
+    [
+        "webperf/webperf.html",
+        "webperf/display.html",
+        "webperf/clock.html",
+        {
+            "filename":"webperf/network.html",
+            "attr": {
+                "data-js":"js/webperf.js"
+            }
+        }
+    ],
+    {
+        "filename":"step.html",
+        "attr": {
+            "data-background":"images/picard-makeit-so.jpg"
+        }
+    },
+    [
+        "h2dev/impact.html",
+        "h2dev/java.html",
+        "h2dev/push.html",
+        "h2dev/async.html"
+    ],
+    [
+        "h2ops/deploy.html",
+        "h2ops/cdn.html",
+        "h2ops/generic-servers.html",
+        "h2ops/app-servers.html",
+        "h2ops/tools.html",
+        "h2ops/troubleshooting.html",
+        "h2ops/example-nghttpx.html",
+        "h2ops/example-haproxy.html",
+        "h2ops/load-balancing.html"
+    ],
+    [
+        "h2next/limits.html",
+        "h2next/proxies.html",
+        "h2next/quic.html"
+    ],
     {
         "filename": "thanks.html",
         "attr": {
             "data-background":"images/spock-llap.jpg"
         }
-
     }
-
 ]
