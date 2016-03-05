@@ -19,6 +19,7 @@
             "filename":"http/original.html"
         },
         "http/complex.html",
+        "http/complex2.html",
         "http/inefficient.html",
         "http/synchronous.html",
         {
