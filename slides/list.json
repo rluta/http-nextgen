@@ -11,28 +11,26 @@
             "data-background":"images/enterprise.jpg"
         }
     },
-    [
-        {
-            "attr": {
-                "data-background": "images/st-original-cast.jpg"
-            },
-            "filename":"http/original.html"
+    {
+        "attr": {
+            "data-background": "images/st-original-cast.jpg"
         },
-        "http/complex.html",
-        "http/complex2.html",
-        "http/inefficient.html",
-        "http/synchronous.html",
-        {
-            "attr": {
-                "data-js":"js/plt.js"
-            },
-            "filename":"http/plt.html"
+        "filename":"http/original.html"
+    },
+    "http/complex.html",
+    {
+        "filename":"doctor.html",
+        "attr": {
+            "data-background":"images/mccoy-doctor.jpg"
         }
-    ],
+    },
+    "http/complex2.html",
+    "http/inefficient.html",
+    "http/synchronous.html",
     {
         "filename":"facepalm.html",
         "attr": {
-            "data-background":"images/facepalm.jpg"
+            "data-background":"images/picard-facepalm.jpg"
         }
     },
     [
@@ -49,8 +47,8 @@
             },
             "filename":"sse/front-api.html"
         },
-        "sse/example-backend.html",
-        "sse/use-cases.html"
+        "sse/use-cases.html",
+        "sse/example-backend.html"
     ],
     [
         {
@@ -61,120 +59,87 @@
         },
         "ws/negociation.html",
         "ws/sockets-overview.html",
+        "ws/use-cases.html",
         {
-            "attr":{
-                "data-js":"js/websockets.js"
+            "attr": {
+                "data-js": "js/websockets.js"
             },
             "filename": "ws/sockets-example.html"
-        },
-        "ws/use-cases.html",
-        "ws/ws-backend.html"
-    ],
-    [
-        {
-            "filename":"webrtc/title.html",
-            "attr":{
-                "data-background":"images/romulans-viewscreen.jpg"
-            }
-        },
-        "webrtc/how.html",
-        "webrtc/use-cases.html"
+        }
     ],
     {
         "filename":"win.html",
         "attr": {
-            "data-background":"images/win.jpg"
+            "data-background":"images/picard-win.jpg"
         }
     },
     "caniuse.html",
     "gotchas.html",
-    [
-        {
-            "filename":"h2proto/intro.html",
-            "attr": {
-                "data-background":"images/warpspeed.jpg"
-            }
-        },
-        "h2proto/why.html",
-        "h2proto/how.html",
-        "h2proto/variants.html",
-        "h2proto/framing.html",
-        {
-            "filename":"h2proto/streams.html",
-            "attr":{
-                "data-js":"js/h2streams.js"
-            }
-        },
-        {
-            "filename":"h2proto/hpack.html",
-            "attr":{
-                "data-js":"js/hpack.js"
-            }
-        },
-        {
-            "attr":{
-                "data-js":"js/h2demo.js"
-            },
-            "filename": "h2perf/demo.html"
-        }
-    ],
     {
-        "filename":"step.html",
+        "filename":"idontalways.html",
         "attr": {
-            "data-background":"images/data.jpg"
+            "data-background":"images/scotty-scotch.jpg"
         }
     },
-    [
-        "h2perf/frontgains.html",
-        "h2perf/spdyweb-graphs.html",
-        "h2perf/apache2-perf.html",
-        "h2perf/h2o-benchmarks.html"
-    ],
     {
-        "filename":"step.html",
+        "filename":"h2proto/intro.html",
         "attr": {
-            "data-background":"images/picard-engage.jpg"
+            "data-background":"images/warpspeed.jpg"
         }
     },
-    [
-        "webperf/webperf.html",
-        "webperf/display.html",
-        "webperf/clock.html",
-        {
-            "filename":"webperf/network.html",
-            "attr": {
-                "data-js":"js/webperf.js"
-            }
-        }
-    ],
+    "h2proto/why.html",
+    "h2proto/how.html",
+    "h2proto/variants.html",
+    "h2proto/framing.html",
     {
-        "filename":"step.html",
+        "filename":"h2proto/streams.html",
+        "attr":{
+            "data-js":"js/h2streams.js"
+        }
+    },
+    "h2proto/hpack.html",
+    {
+        "filename":"fascinating.html",
+        "attr": {
+            "data-background":"images/spock-fascinating.jpg"
+        }
+    },
+    {
+        "attr":{
+            "data-js":"js/h2demo.js"
+        },
+        "filename": "h2perf/demo.html"
+    },
+    {
+        "filename":"datafun.html",
+        "attr": {
+            "data-background":"images/data-fun.jpg"
+        }
+    },
+    "h2perf/frontgains.html",
+    "h2perf/webperf-impact.html",
+    "h2perf/spdyweb-graphs.html",
+    "h2perf/h2o-benchmarks.html",
+    {
+        "filename":"makeitso.html",
         "attr": {
             "data-background":"images/picard-makeit-so.jpg"
         }
     },
-    [
-        "h2dev/impact.html",
-        "h2dev/java.html",
-        "h2dev/push.html",
-        "h2dev/async.html"
-    ],
-    [
-        "h2ops/deploy.html",
-        "h2ops/cdn.html",
-        "h2ops/generic-servers.html",
-        "h2ops/app-servers.html",
-        "h2ops/tools.html",
-        "h2ops/troubleshooting.html",
-        "h2ops/example-nghttpx.html",
-        "h2ops/example-haproxy.html",
-        "h2ops/load-balancing.html"
-    ],
-    [
-        "h2next/limits.html",
-        "h2next/proxies.html",
-        "h2next/quic.html"
-    ],
+    "h2ops/deploy.html",
+    "h2dev/impact.html",
+    "h2dev/java.html",
+    {
+        "filename":"h2dev/oracle.html",
+        "attr": {
+            "data-background":"images/kirk-khaan.jpg"
+        }
+    },
+    "h2dev/push.html",
+    "h2dev/async.html",
+    "h2ops/troubleshooting.html",
+    "h2next/limits.html",
+    "h2next/quic.html",
     {
         "filename": "thanks.html",
         "attr": {

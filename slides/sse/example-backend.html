@@ -35,7 +35,7 @@ server.requestHandler(rm.asClosure()).listen(7001)
 <div id="twittercode" class="tab-pane">
 <pre style="min-height: 10em;font-size: 0.8em;"><code class="java" style="min-height: 20em;">
 def twitterFactory = new TwitterStreamFactory().getInstance();
-def queries = ['http2','perfug','webperf'];
+def queries = ['http2'];
 
 final StatusListener statusListener = new StatusAdapter() {
     @Override

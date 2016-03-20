@@ -16,12 +16,6 @@ def adminWebConf = [
 ]
 
 container.with {
-    deployModule("org.crashub~vertx.shell~2.1.0",[
-        "crash.auth":"simple",
-        "crash.auth.simple.username":"admin",
-        "crash.auth.simple.password":"admin",
-        "crash.ssh.port":2000
-    ])
     deployModule('io.vertx~mod-web-server~2.0.0-final', [
         web_root: 'web',
         port: 8888,
@@ -33,5 +27,4 @@ container.with {
     deployVerticle('SSE.groovy')
     deployVerticle('EventGenerator.groovy')
     deployVerticle('TwitterGenerator.groovy')
-    deployVerticle('Websocket.groovy')
 }

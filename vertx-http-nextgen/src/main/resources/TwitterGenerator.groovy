@@ -8,7 +8,7 @@ import twitter4j.TwitterStreamFactory;
 
 final TwitterStream twitterFactory = new TwitterStreamFactory().getInstance();
 
-def queries = ['http2','perfug','webperf'];
+def queries = ['http2','breizhcamp','BzhCmp'];
 
 final StatusListener statusListener = new StatusAdapter() {
     @Override
