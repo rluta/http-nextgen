@@ -33,32 +33,33 @@
             "data-background":"images/picard-facepalm.jpg"
         }
     },
+    {
+        "attr":{
+            "data-background":"images/enterprise-full-fire.png"
+        },
+        "filename":"sse/title.html"
+    },
+    "sse/event-source.html",
+    {
+        "attr":{
+            "data-js":"js/eventsource.js"
+        },
+        "filename":"sse/front-api.html"
+    },
     [
-        {
-            "attr":{
-                "data-background":"images/enterprise-full-fire.png"
-            },
-            "filename":"sse/title.html"
-        },
-        "sse/event-source.html",
-        {
-            "attr":{
-                "data-js":"js/eventsource.js"
-            },
-            "filename":"sse/front-api.html"
-        },
         "sse/use-cases.html",
         "sse/example-backend.html"
     ],
+    {
+        "filename":"ws/title.html",
+        "attr":{
+            "data-background":"images/teleporter.jpg"
+        }
+    },
+    "ws/negociation.html",
+    "ws/sockets-overview.html",
     [
-        {
-            "filename":"ws/title.html",
-            "attr":{
-                "data-background":"images/teleporter.jpg"
-            }
-        },
-        "ws/negociation.html",
-        "ws/sockets-overview.html",
+
         "ws/use-cases.html",
         {
             "attr": {
@@ -90,14 +91,16 @@
     "h2proto/why.html",
     "h2proto/how.html",
     "h2proto/variants.html",
-    "h2proto/framing.html",
-    {
-        "filename":"h2proto/streams.html",
-        "attr":{
-            "data-js":"js/h2streams.js"
-        }
-    },
-    "h2proto/hpack.html",
+    [
+        "h2proto/framing.html",
+        {
+            "filename":"h2proto/streams.html",
+            "attr":{
+                "data-js":"js/h2streams.js"
+            }
+        },
+        "h2proto/hpack.html"
+    ],
     {
         "filename":"fascinating.html",
         "attr": {
@@ -117,9 +120,11 @@
         }
     },
     "h2perf/frontgains.html",
-    "h2perf/webperf-impact.html",
     "h2perf/spdyweb-graphs.html",
-    "h2perf/h2o-benchmarks.html",
+    [
+        "h2perf/h2o-benchmarks.html",
+        "h2perf/apache2-perf.html"
+    ],
     {
         "filename":"makeitso.html",
         "attr": {
@@ -127,7 +132,11 @@
         }
     },
     "h2ops/deploy.html",
-    "h2dev/impact.html",
+    [
+        "h2dev/impact.html",
+        "h2perf/webperf-impact.html"
+    ],
+    "h2dev/java-api.html",
     "h2dev/java.html",
     {
         "filename":"h2dev/oracle.html",
@@ -136,9 +145,17 @@
         }
     },
     "h2dev/push.html",
-    "h2dev/async.html",
-    "h2ops/troubleshooting.html",
+    [
+        "h2dev/async.html",
+        "h2ops/troubleshooting.html"
+    ],
     "h2next/limits.html",
+    {
+        "filename": "next.html",
+        "attr": {
+            "data-background":"images/kirk-future.jpg"
+        }
+    },
     "h2next/quic.html",
     {
         "filename": "thanks.html",
