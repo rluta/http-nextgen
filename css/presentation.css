@@ -18,7 +18,7 @@
 .reveal input { color: black; }
 
 .reveal .chat.self { color : cyan }
-.reveal .chat.command { color : darkorange }
+.reveal .chat.command { color : orange }
 .reveal .chat.remote { color : #f5f5f5 }
 .reveal .chat span { font-weight: bold }
 
@@ -32,7 +32,7 @@
 .column-2 { float:left; width: 48%; }
 .column-3 { float:left; width: 32%; }
 
-strong { color: darkorange }
+strong { color: orange }
 em { color: cyan }
 
 h1 {

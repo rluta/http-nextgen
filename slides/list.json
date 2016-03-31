@@ -58,16 +58,7 @@
     },
     "ws/negociation.html",
     "ws/sockets-overview.html",
-    [
-
-        "ws/use-cases.html",
-        {
-            "attr": {
-                "data-js": "js/websockets.js"
-            },
-            "filename": "ws/sockets-example.html"
-        }
-    ],
+    "ws/use-cases.html",
     {
         "filename":"win.html",
         "attr": {
@@ -91,16 +82,14 @@
     "h2proto/why.html",
     "h2proto/how.html",
     "h2proto/variants.html",
-    [
-        "h2proto/framing.html",
-        {
-            "filename":"h2proto/streams.html",
-            "attr":{
-                "data-js":"js/h2streams.js"
-            }
-        },
-        "h2proto/hpack.html"
-    ],
+    "h2proto/framing.html",
+    {
+        "filename":"h2proto/streams.html",
+        "attr":{
+            "data-js":"js/h2streams.js"
+        }
+    },
+    "h2proto/hpack.html",
     {
         "filename":"fascinating.html",
         "attr": {
@@ -132,10 +121,8 @@
         }
     },
     "h2ops/deploy.html",
-    [
-        "h2dev/impact.html",
-        "h2perf/webperf-impact.html"
-    ],
+    "h2dev/impact.html",
+    "h2perf/webperf-impact.html",
     "h2dev/java-api.html",
     "h2dev/java.html",
     {
