@@ -1,0 +1,404 @@
+<style>
+    /* column h2chart --------------------------------------------------------------*/
+    .h2chart {
+    }
+    .h2chart table {
+        border-collapse: collapse;
+    }
+    .h2chart td {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .h2chart td, .h2chart tr, .h2chart th {
+        border: none !important;
+        text-align: center!important;
+    }
+
+    .h2chart td .small {
+        font-size: 11pt;
+    }
+
+    .col-h2chart {
+    }
+
+    .h2chart .legend {
+        font-size: 18pt;
+        position: absolute;
+        top: 20%;
+        right: -8.5em;
+        text-align: left;
+    }
+    .h2chart .legend-left {
+        left: -8.5em !important;
+    }
+    .h2chart .legend ul {
+        list-style-type: none;
+    }
+    .h2chart .legend li {
+        border-left: .7em solid black;
+        padding: .2em;
+        border-color: red;
+    }
+    .h2chart .legend li.seq-1 {
+        border-color: grey;
+    }
+    .h2chart .legend li.seq-2 {
+        border-color: orange;
+    }
+    .h2chart .legend li.seq-3 {
+        border-color: yellow;
+    }
+    .h2chart .legend li.seq-4 {
+        border-color: turquoise;
+    }
+    .h2chart .legend li.seq-5 {
+        border-color: lightblue;
+    }
+    .h2chart .legend li.seq-6 {
+        border-color: #0090cc;
+    }
+    .h2chart .legend li.seq-7 {
+        border-color: violet;
+    }
+    .h2chart .legend li.seq-8 {
+        border-color: purple;
+    }
+    .h2chart .legend li.seq-9 {
+        border-color: #90cc00;
+    }
+    .animated-h2chart .column {
+        opacity: .5;
+    }
+
+    .h2chart-area {
+    }
+
+    .col-h2chart .h2chart-area {
+        margin: .2em auto!important;
+        height: 10em;
+        text-align: center;
+        width: 1.2em;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .h2chart .x-axis {
+        border-top: solid 1px white !important;
+    }
+
+    .col-h2chart td {
+        width: 1em;
+    }
+
+    .h2chart .x-axis td {
+        font-size: 18pt;
+        text-align: center;
+        padding: .1em !important;
+    }
+    .h2chart .x-legend {
+        font-size: 24pt;
+    }
+    .h2chart .y-axis {
+        font-size: 18pt;
+        text-align: left;
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+    }
+    .h2chart .y-axis .right {
+        float: right;
+    }
+    .h2chart .y-legend {
+        font-size: 24pt;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 13em;
+        -webkit-transform: translate(-8em, 5.5em) rotate(90deg);
+        transform: translate(-8em, 5.5em) rotate(90deg);
+    }
+    .h2chart .column {
+        height: 120%;
+        width: 1em;
+        margin: 0 auto;
+        background-color: red;
+        position: absolute;
+    }
+    .h2chart .ref-val {
+        background-color: #444!important;
+    }
+    .h2chart .ref-val2 {
+        background-color: #888!important;
+    }
+
+    /* animated h2charts------------------------------------------------------------*/
+
+    .animated-h2chart {
+        position: relative;
+        margin: auto;
+        height: 13em;
+        margin-top: 2em;
+    }
+    .animated-h2chart .h2chart {
+        position: absolute;
+        top: 0;
+        left: 25%;
+    }
+    .animated-h2chart .fragment .x-axis,
+    .animated-h2chart .fragment .x-legend {
+        visibility: hidden;
+    }
+    .animated-h2chart .fragment-title {
+        background-color: dimgray;
+        position: absolute;
+        font-size: 16pt;
+        top: 1em;
+        right: -10em;
+        width: 10em;
+        text-align: right;
+        padding-right: 0.5em;
+    }
+
+    .animated-h2chart .seq-1 .column,
+    .animated-h2chart .seq-1.column {
+        background-color: grey;
+    }
+    .animated-h2chart .seq-2 .column,
+    .animated-h2chart .seq-2.column {
+        background-color: orange;
+    }
+    .animated-h2chart .seq-3 .column,
+    .animated-h2chart .seq-3.column {
+        background-color: yellow;
+    }
+    .animated-h2chart .seq-4 .column,
+    .animated-h2chart .seq-4.column {
+        background-color: turquoise;
+    }
+    .animated-h2chart .seq-5 .column,
+    .animated-h2chart .seq-5.column {
+        background-color: lightblue;
+    }
+    .animated-h2chart .seq-6 .column,
+    .animated-h2chart .seq-6.column {
+        background-color: #0090cc;
+    }
+    .animated-h2chart .seq-7 .column,
+    .animated-h2chart .seq-7.column {
+        background-color: violet;
+    }
+    .animated-chayrt .seq-8 .column,
+    .animated-chayrt .seq-8.column {
+        background-color: purple;
+    }
+    .animated-h2chart .seq-9 .column,
+    .animated-h2chart .seq-9.column {
+        background-color: #90cc00;
+        opacity: .8;
+    }
+    .animated-h2chart .column {
+        opacity: .5;
+    }
+    .animated-h2chart .col-opaque .column {
+        opacity: 1;
+    }
+</style>
+<h2>Apache 2.4.17 Scaling</h2>
+<p class="small" style="margin-top: -0.5em; margin-bottom: 2em">~0 latency, 2k resource, 500k x GET, localhost, 4 clients, using ab + h2load</p>
+
+<div class="animated-h2chart">
+    <div class="h2chart seq-6">
+        <div class="y-legend">
+            <div class="y-axis">~50k</div>
+            <div>requests / sec</div>
+        </div>
+        <table class="col-h2chart">
+            <tbody>
+            <tr>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+            </tr>
+            <tr class="x-axis">
+                <td>1</td><td>2</td><td>6</td><td>6</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td><span class="small">#con/client</span></td>
+            </tr>
+            <tr class="x-axis">
+                <td>1</td><td>1</td><td>1</td><td>1</td><td>6</td><td>12</td><td>24</td><td>48</td><td>96</td><td><span class="small">#max&nbsp;requests/con</span></td>
+            </tr>
+            <tr class="x-legend">
+                <td colspan="3">http/1</td><td colspan="6">http/2</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="h2chart fragment seq-6">
+        <div class="fragment-title">17600</div>
+        <table class="col-h2chart">
+            <tbody>
+            <tr>
+                <td><div class="h2chart-area"><div class="column" style="top: 65%;"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="h2chart fragment seq-6">
+        <div class="fragment-title">27500 vs. 17600<br/>(56% gain)</div>
+        <table class="col-h2chart">
+            <tbody>
+            <tr>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"><div class="column" style="top: 45%;"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="h2chart fragment seq-6">
+        <div class="fragment-title">31300 vs. 17600<br/>(78% gain)</div>
+        <table class="col-h2chart">
+            <tbody>
+            <tr>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"><div class="column" style="top: 37%;"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="h2chart fragment seq-1">
+        <div class="fragment-title">22900 vs. 17600<br/>(30% gain)</div>
+        <table class="col-h2chart">
+            <tbody>
+            <tr>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"><div class="column" style="top: 54%;"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="h2chart fragment seq-9">
+        <div class="fragment-title">35500 vs. 17600<br/>(102% gain)</div>
+        <table class="col-h2chart">
+            <tbody>
+            <tr>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"><div class="column" style="top: 29%;"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="h2chart fragment seq-9">
+        <div class="fragment-title">38900 vs. 17600<br/>(121% gain)</div>
+        <table class="col-h2chart">
+            <tbody>
+            <tr>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"><div class="column" style="top: 22%;"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="h2chart fragment seq-9">
+        <div class="fragment-title">40200 vs. 17600<br/>(128% gain)</div>
+        <table class="col-h2chart">
+            <tbody>
+            <tr>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"><div class="column" style="top: 20%;"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="h2chart fragment seq-9">
+        <div class="fragment-title">40600 vs. 17600<br/>(131% gain)</div>
+        <table class="col-h2chart">
+            <tbody>
+            <tr>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"><div class="column" style="top: 19%;"></div></td>
+                <td><div class="h2chart-area"></div></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="h2chart fragment seq-9">
+        <div class="fragment-title">41000 vs. 17600<br/>(133% gain)</div>
+        <table class="col-h2chart">
+            <tbody>
+            <tr>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"></div></td>
+                <td><div class="h2chart-area"><div class="column" style="top: 18%;"></div></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<p style="margin-top: 3em;">
+    <a href="https://greenbytes.de/pres/httpd-h2/#/">httpd+h2, Tales of Mystery and Imagination</a> by Stefan Eissing
+</p>

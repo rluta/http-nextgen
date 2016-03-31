@@ -1,0 +1,23 @@
+<h2>HTTP/2 on the JVM</h2>
+
+<div style="width: 60%; margin-left: 20%; margin-top: 2em; text-align: left">
+    <p>JDK 8 SSLEngine doesn't implement <strong>ALPN</strong> extension (JEP 244)</p>
+    <br />
+    <p>Current options:</p>
+    <ul>
+        <li>Use <strong>Openssl JNI bridge</strong> (aka the Netty way)</li>
+        <li><strong>Override the JDK SSLEngine</strong> (aka the Jetty way)</li>
+    </ul>
+</div>
+
+<div style="width: 60%; margin-left: 20%; margin-top: 2em; text-align: left">
+    <p>If using a SSLEngine override:</p>
+
+    <pre><code>
+    java -Xbootclasspath/p:_path_to_alpn_boot_jar ...
+    </code></pre>
+</div>
+
+<div class="fragment" style="width: 60%; margin-left: 20%; margin-top: 2em; text-align: left">
+    <p><strong>JDK 9 current release target: mid-2017</strong></p>
+</div>

@@ -1,0 +1,35 @@
+<h2>HTTP/2 Negociation</h2>
+
+
+<div class="container">
+<div class="text-left row">
+    <h3>ALPN - h2 protocol</h3>
+    <p>
+        TLS extension for negociating application protocol during handshake
+    </p>
+    <p>Dependant on TLS so communication are always encrypted</p>
+    <p>Preferred and recommended way to deploy HTTP/2</p>
+</div>
+<div class="row">
+<div class="col-md-6 text-left fragment">
+    <h3>HTTP Upgrade - h2c protocol</h3>
+    <p>Use HTTP/1.1 Upgrade mechanism, similar to WebSocket</p>
+    <p>May be proxy unfriendly but does not require encryption</p>
+</div>
+<div class="col-md-6 text-left fragment">
+    <pre><code class="http">
+    GET / HTTP/1.1
+    Host: www.work4labs.com
+    Upgrade: h2c
+    Connection: Upgrade, HTTP2-Settings
+    HTTP2-Settings: &lt;base64 SETTINGS&gt;
+
+    HTTP/1.1 101 Switching protocol
+    Upgrade: h2c
+    Connection: Upgrade
+
+    &lt;HTTP2 frame data&gt;
+    </code></pre>
+</div>
+</div>
+</div>

@@ -1,0 +1,85 @@
+<style>
+    svg .arrow, svg .arrowHead {
+        stroke: lightgray;
+        fill: lightgray;
+        stroke-dasharray: 20,10;
+        stroke-width: 0.1em;
+    }
+
+    svg .mux {
+        fill: darkgray;
+        opacity: 0.3;
+    }
+
+    svg .frame {
+        opacity: 0.9;
+        stroke: lightgray;
+    }
+
+    div.hpack-demo {
+        position: relative;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    div.hpack-demo div.client {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    div.hpack-demo div.server {
+        position: absolute;
+        left: 0;
+        top: 50%;
+    }
+
+    #hpack-sender {
+        position: absolute;
+        font-size: 0.8em;
+        left: -7em;
+        top: 0;
+        text-align: left;
+        width: 10em;
+    }
+
+    #hpack-rcv{
+        position: absolute;
+        font-size: 0.8em;
+        right: -7em;
+        top: 0;
+        text-align: left;
+        width: 10em;
+    }
+
+    .header span.header-name  {
+        display: inline-block;
+        width: 4em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        float: left;
+    }
+
+    .header span.header-value  {
+        display: inline-block;
+        width: 6em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        clear: both;
+    }
+</style>
+
+<h2>HPACK: Header compression</h2>
+
+<ul>
+    <li>Endpoints maintain an index table of headers for connection</li>
+    <li>Each header frame received updates the index state</li>
+    <li>Huffman coding may be used to further reduce bitsize</li>
+</ul>
+
+<div class="fragment" style="margin-top: 2em; font-size: 1.3em; line-height: 1.4em">
+    <strong>Repeated headers</strong> across multiple requests (like User-Agent, cookies, etc...) cost <strong>1 byte after first transmission</strong>
+</div>
+<div class="hpack-demo">
+
+</div>

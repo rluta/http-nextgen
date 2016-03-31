@@ -1,0 +1,45 @@
+<h2>Limitations</h2>
+
+<div class="container">
+<div class="col-md-6 text-left">
+    <div class="fragment">
+        <h3>SSE</h3>
+        <ul>
+            <li>Internet Explorer does not support SSE</li>
+            <li><strong>Use Polyfill for IE</strong></li>
+        </ul>
+    </div>
+    <div class="fragment">
+        <h3>Websockets</h3>
+        <ul>
+            <li>Proxies don't like them</li>
+            <li><strong>WS+TLS is the best way go</strong></li>
+        </ul>
+    </div>
+    <div class="fragment">
+        <h3>Abstractions</h3>
+        <ul>
+            <li><a href="http://socket.io/">Socket.io/Engine.io</a></li>
+            <li><a href="http://sockjs.org">SockJS</a></li>
+            <li>many more...</li>
+        </ul>
+    </div>
+</div>
+<div class="col-md-6 text-left">
+    <div class="fragment">
+        <h3>Backend</h3>
+        <ul>
+            <li>Need a server well-suited for many long-lived connections</li>
+            <li>May require work on hosting infra (load-balancers, reverse proxies, etc...)</li>
+            <li><strong>Event-driven platforms are perfect for these</strong></li>
+        </ul>
+    </div>
+    <div class="fragment">
+        <h3>Saas Offerings</h3>
+        <ul>
+            <li><a href="http://firebase.com">Firebase</a></li>
+        </ul>
+    </div>
+</div>
+
+</div>

@@ -1,0 +1,19 @@
+<h2>HTTP/2 secure proxy</h2>
+
+<ul>
+    <li>HTTP/2 intermediary can be used as a secure proxy for outgoing requests</li>
+    <li>Provides network optimization between client and proxy</li>
+    <li>Provides confidentiality</li>
+    <li>Does not require a local agent installed</li>
+</ul>
+
+<p>To try it out:</p>
+<pre><code>
+docker run -it -p 3000:3000 -p 443:443 rluta/h2proxy run.sh proxy h2Proxy.mydomain.com
+</code></pre>
+<ul>
+    <li>Configure DNS or host entry</li>
+    <li>Accept self-signed certificate by connecting to https://h2Proxy.mydomain.com/</li>
+    <li>Configure browser to use PAC file https://h2proxy.mydomain.com/secure.pac</li>
+</ul>
+

@@ -1,0 +1,17 @@
+<h2>HTTP/2 Push strategies</h2>
+
+<ul>
+    <li>Hard-coded at HTTP/2 server level</li>
+    <li>Manually coded at application level</li>
+    <li>Automatic association like <a href="http://www.eclipse.org/jetty/documentation/current/http2-configuring-push.html">Jetty Push</a></li>
+    <li>Use response header as server hint</li>
+</ul>
+<div  class="fragment" style="width: 100%; margin-top: 2em; text-align: left">
+
+<pre style="font-size: 0.9em; width:120%; margin-left:-10%;line-height: 1em"><code class="json">Link: &lt;/style.css&gt;; rel=preload; as=style
+
+Link: &lt;/app.js&gt;; rel=preload; as=script
+
+Link: &lt;https://fonts.example.com/font.woff&gt;; rel=preload; as=font; crossorigin
+</code></pre>
+</div>

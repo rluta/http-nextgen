@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>HTTP Next Gen</title>
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.min.css">
+
+        <link rel="stylesheet" href="bower_components/reveal.js/css/theme/default.css" id="theme">
+        <link rel="stylesheet" href="css/bootstrap.css" >
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css" >
+        <link rel="stylesheet" href="css/jquery.slidepanel.css" >
+        <link rel="stylesheet" href="css/presentation.css" >
+
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="bower_components/reveal-highlight-themes/styles/zenburn.css" id="highlight-theme">
+        <link rel="stylesheet" src="bower_components/nvd3/build/nv.d3.min.css" />
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+          if( window.location.search.match( /print-pdf/gi ) ) {
+            var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'bower_components/reveal.js/css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <div class="slides">
+
+                
+                    
+                        
+    <section data-background="images/stars.jpg" data-html="slides/title.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-background="images/enterprise.jpg" data-html="slides/intro.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-background="images/st-original-cast.jpg" data-html="slides/http/original.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/http/complex.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-background="images/mccoy-doctor.jpg" data-html="slides/doctor.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/http/complex2.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/http/inefficient.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/http/synchronous.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-background="images/picard-facepalm.jpg" data-html="slides/facepalm.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-background="images/enterprise-full-fire.png" data-html="slides/sse/title.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/sse/event-source.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-js="js/eventsource.js" data-html="slides/sse/front-api.html"></section>
+
+
+                    
+                    
+                
+                    
+                    
+                        <section>
+                            
+                                
+    <section data-html="slides/sse/use-cases.html"></section>
+
+
+                            
+                                
+    <section data-html="slides/sse/example-backend.html"></section>
+
+
+                            
+                        </section>
+                    
+                
+                    
+                        
+    <section data-background="images/teleporter.jpg" data-html="slides/ws/title.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/ws/negociation.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/ws/sockets-overview.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/ws/use-cases.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-background="images/picard-win.jpg" data-html="slides/win.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/caniuse.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/gotchas.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-background="images/scotty-scotch.jpg" data-html="slides/idontalways.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-background="images/warpspeed.jpg" data-html="slides/h2proto/intro.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/h2proto/why.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/h2proto/how.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/h2proto/variants.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/h2proto/framing.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-js="js/h2streams.js" data-html="slides/h2proto/streams.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/h2proto/hpack.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-background="images/spock-fascinating.jpg" data-html="slides/fascinating.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-js="js/h2demo.js" data-html="slides/h2perf/demo.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-background="images/data-fun.jpg" data-html="slides/datafun.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/h2perf/frontgains.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/h2perf/spdyweb-graphs.html"></section>
+
+
+                    
+                    
+                
+                    
+                    
+                        <section>
+                            
+                                
+    <section data-html="slides/h2perf/h2o-benchmarks.html"></section>
+
+
+                            
+                                
+    <section data-html="slides/h2perf/apache2-perf.html"></section>
+
+
+                            
+                        </section>
+                    
+                
+                    
+                        
+    <section data-background="images/picard-makeit-so.jpg" data-html="slides/makeitso.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/h2ops/deploy.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/h2dev/impact.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/h2perf/webperf-impact.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/h2dev/java-api.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/h2dev/java.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-background="images/kirk-khaan.jpg" data-html="slides/h2dev/oracle.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/h2dev/push.html"></section>
+
+
+                    
+                    
+                
+                    
+                    
+                        <section>
+                            
+                                
+    <section data-html="slides/h2dev/async.html"></section>
+
+
+                            
+                                
+    <section data-html="slides/h2ops/troubleshooting.html"></section>
+
+
+                            
+                        </section>
+                    
+                
+                    
+                        
+    <section data-html="slides/h2next/limits.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-background="images/kirk-future.jpg" data-html="slides/next.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-html="slides/h2next/quic.html"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-background="images/spock-llap.jpg" data-html="slides/thanks.html"></section>
+
+
+                    
+                    
+                
+            </div>
+
+        </div>
+
+        <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+        <script src="bower_components/reveal.js/js/reveal.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/jquery.slidepanel.js"></script>
+        <script src="bower_components/d3/d3.min.js"></script>
+        <script src="bower_components/nvd3/build/nv.d3.min.js"></script>
+
+        <script>
+            function actionToggle() {
+                var current = Reveal.getCurrentSlide();
+                $(current).trigger('action');
+            }
+
+            function isGithub() {
+                return (window.location.href.match('rluta.github.io') != null)
+                    || (window.location.search.match('github') != null)
+            }
+
+            Array.prototype.diff = function(a) {
+                return this.filter(function(i) {return !(a.indexOf(i) > -1);});
+            };
+
+            var Vertx = new Worker('js/vertx-worker.js');
+            Vertx.onmessage = function (msg) {
+                if (msg.data.type == 'debug')
+                    console.log(msg.data.data)
+                else {
+                    $(Reveal.getCurrentSlide()).trigger(msg.data.type,msg.data.data);
+                }
+            }
+
+            // Configure Reveal
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                width: 1300,
+                height: 900,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlighting(); } },
+                    { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+                    // { src: 'bower_components/reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+                    //{ src: 'bower_components/reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } }
+                ]
+            });
+
+            Reveal.addEventListener( 'ready', function( event ) {
+                Reveal.configure({
+                    keyboard: {
+                        60: actionToggle,
+                        62: actionToggle,
+                        32: actionToggle
+                    }
+                });
+            } );
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,77 @@
+<style>
+    .deploy-option h2 {
+        color: darkorange;
+    }
+    .deploy-option {
+        flex: 1 0 33%;
+    }
+    .deploy-option div ul {
+        list-style: none;
+        margin-top: 1em;
+        margin-left: 0em;
+        text-align: center;
+    }
+    .deploy-option div:last-child ul {
+        margin-top: 3em;
+        color: cyan;
+    }
+</style>
+<h2>Deploying HTTP/2</h2>
+
+<div style="display: flex; flex-direction: row; -webkit-flex-direction: row">
+<div class="deploy-option">
+    <div>
+        <h2>CDN</h2>
+    </div>
+    <div>
+        <ul>
+            <li>Easiest</li>
+            <li>Scalable</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>Akamai</li>
+            <li>Cloudflare</li>
+            <li>MaxCDN</li>
+        </ul>
+    </div>
+</div>
+<div class="deploy-option">
+    <div>
+        <h2>Standard</h2>
+    </div>
+    <div>
+        <ul>
+            <li>Familiar</li>
+            <li>Inclusive</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>Nginx</li>
+            <li>Apache</li>
+            <li>h2o</li>
+        </ul>
+    </div>
+</div>
+<div class="deploy-option">
+    <div>
+        <h2>Applicative</h2>
+    </div>
+    <div>
+        <ul>
+            <li>Control</li>
+            <li>Performance</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>Netty, Jetty</li>
+            <li>Node</li>
+            <li>Go</li>
+        </ul>
+    </div>
+</div>
+<p style="clear: both"></p>
+</div>

@@ -1,0 +1,153 @@
+[
+    {
+        "filename":"title.html",
+        "attr": {
+            "data-background":"images/stars.jpg"
+        }
+    },
+    {
+        "filename":"intro.html",
+        "attr": {
+            "data-background":"images/enterprise.jpg"
+        }
+    },
+    {
+        "attr": {
+            "data-background": "images/st-original-cast.jpg"
+        },
+        "filename":"http/original.html"
+    },
+    "http/complex.html",
+    {
+        "filename":"doctor.html",
+        "attr": {
+            "data-background":"images/mccoy-doctor.jpg"
+        }
+    },
+    "http/complex2.html",
+    "http/inefficient.html",
+    "http/synchronous.html",
+    {
+        "filename":"facepalm.html",
+        "attr": {
+            "data-background":"images/picard-facepalm.jpg"
+        }
+    },
+    {
+        "attr":{
+            "data-background":"images/enterprise-full-fire.png"
+        },
+        "filename":"sse/title.html"
+    },
+    "sse/event-source.html",
+    {
+        "attr":{
+            "data-js":"js/eventsource.js"
+        },
+        "filename":"sse/front-api.html"
+    },
+    [
+        "sse/use-cases.html",
+        "sse/example-backend.html"
+    ],
+    {
+        "filename":"ws/title.html",
+        "attr":{
+            "data-background":"images/teleporter.jpg"
+        }
+    },
+    "ws/negociation.html",
+    "ws/sockets-overview.html",
+    "ws/use-cases.html",
+    {
+        "filename":"win.html",
+        "attr": {
+            "data-background":"images/picard-win.jpg"
+        }
+    },
+    "caniuse.html",
+    "gotchas.html",
+    {
+        "filename":"idontalways.html",
+        "attr": {
+            "data-background":"images/scotty-scotch.jpg"
+        }
+    },
+    {
+        "filename":"h2proto/intro.html",
+        "attr": {
+            "data-background":"images/warpspeed.jpg"
+        }
+    },
+    "h2proto/why.html",
+    "h2proto/how.html",
+    "h2proto/variants.html",
+    "h2proto/framing.html",
+    {
+        "filename":"h2proto/streams.html",
+        "attr":{
+            "data-js":"js/h2streams.js"
+        }
+    },
+    "h2proto/hpack.html",
+    {
+        "filename":"fascinating.html",
+        "attr": {
+            "data-background":"images/spock-fascinating.jpg"
+        }
+    },
+    {
+        "attr":{
+            "data-js":"js/h2demo.js"
+        },
+        "filename": "h2perf/demo.html"
+    },
+    {
+        "filename":"datafun.html",
+        "attr": {
+            "data-background":"images/data-fun.jpg"
+        }
+    },
+    "h2perf/frontgains.html",
+    "h2perf/spdyweb-graphs.html",
+    [
+        "h2perf/h2o-benchmarks.html",
+        "h2perf/apache2-perf.html"
+    ],
+    {
+        "filename":"makeitso.html",
+        "attr": {
+            "data-background":"images/picard-makeit-so.jpg"
+        }
+    },
+    "h2ops/deploy.html",
+    "h2dev/impact.html",
+    "h2perf/webperf-impact.html",
+    "h2dev/java-api.html",
+    "h2dev/java.html",
+    {
+        "filename":"h2dev/oracle.html",
+        "attr": {
+            "data-background":"images/kirk-khaan.jpg"
+        }
+    },
+    "h2dev/push.html",
+    [
+        "h2dev/async.html",
+        "h2ops/troubleshooting.html"
+    ],
+    "h2next/limits.html",
+    {
+        "filename": "next.html",
+        "attr": {
+            "data-background":"images/kirk-future.jpg"
+        }
+    },
+    "h2next/quic.html",
+    {
+        "filename": "thanks.html",
+        "attr": {
+            "data-background":"images/spock-llap.jpg"
+        }
+    }
+]
