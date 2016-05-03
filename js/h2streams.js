@@ -105,7 +105,7 @@
 
 
     function render() {
-        height = svgNode.offsetHeight - 20, width = svgNode.offsetWidth - 20;
+        height = svgNode.clientHeight - 20, width = svgNode.clientWidth - 20;
         rectHeight = height * 0.4, rectWidth = width * 0.8;
         svg = d3.select(svgNode).append('g')
             .attr('transform', 'translate(10,10)');
